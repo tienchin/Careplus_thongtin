@@ -1,0 +1,91 @@
+/* src/pages/SearchPage.css */
+.search-page-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff; /* Nền trắng cho card */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center; /* Căn giữa các thông báo và heading */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Transition cho theme */
+}
+
+.search-page-container h1 {
+  font-size: 32px;
+  color: #007bff; /* Màu xanh cho tiêu đề tìm kiếm */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loading-message-search, .error-message-search, .no-results-message {
+  font-size: 18px;
+  color: #6c757d;
+  padding: 20px;
+}
+
+.error-message-search {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Ẩn tiêu đề của ArticleList trên trang SearchPage */
+.search-page-container .article-list-section h2 {
+  display: none;
+}
+
+/* Các style cho container bài viết đã có trong ArticleList.css */
+.search-page-container .articles-container {
+  /* Đảm bảo container của bài viết cũng được căn giữa */
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Các style grid đã có trong ArticleList.css */
+}
+
+/* --- Styles cho Theme Dark --- */
+.theme-dark .search-page-container {
+  background-color: #2d3748; /* Nền tối cho card */
+  border-color: #4a5568; /* Viền tối */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.theme-dark .search-page-container h1 {
+  color: #63b3ed; /* Màu xanh nhạt cho tiêu đề */
+  border-bottom-color: #63b3ed;
+}
+
+.theme-dark .loading-message-search,
+.theme-dark .error-message-search,
+.theme-dark .no-results-message {
+  color: #a0aec0; /* Màu chữ sáng hơn */
+}
+
+.theme-dark .error-message-search {
+  color: #f87171; /* Màu đỏ sáng hơn */
+}
+
+/* --- Styles cho Theme Green --- */
+.theme-green .search-page-container {
+  background-color: #e0f2e9; /* Nền xanh nhạt */
+  border-color: #9ae6b4;
+}
+
+.theme-green .search-page-container h1 {
+  color: #38a169; /* Màu xanh đậm */
+  border-bottom-color: #38a169;
+}
+
+.theme-green .loading-message-search,
+.theme-green .error-message-search,
+.theme-green .no-results-message {
+  color: #6b7a70; /* Màu chữ xanh xám */
+}
+
+.theme-green .error-message-search {
+  color: #e53e3e; /* Màu đỏ sẫm hơn */
+}
