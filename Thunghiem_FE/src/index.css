@@ -1,0 +1,237 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Light (mặc định) */
+.theme-light {
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.theme-light .app-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+.theme-light .app-header h1 { color: #007bff; }
+.theme-light .app-header span { color: #6c757d; }
+.theme-light .main-nav a { color: #333; }
+.theme-light .main-nav a:hover { color: #007bff; }
+.theme-light .auth-section a, .theme-light .user-icon-link { color: #007bff; }
+.theme-light .theme-switcher { color: #007bff; }
+
+.theme-light .app-main {
+  background-color: #f4f7f6;
+}
+
+.theme-light .article-list-section h2,
+.theme-light .daily-news-section h2,
+.theme-light .about-careplus h2 {
+  color: #333;
+  border-bottom-color: #007bff;
+}
+
+.theme-light .article-preview h3 { color: #0056b3; }
+.theme-light .article-meta { color: #6c757d; }
+.theme-light .article-preview p { color: #444; }
+.theme-light .read-more-link-about, .theme-light .source-link { color: #007bff; }
+.theme-light .read-more-link-about:hover, .theme-light .source-link:hover { color: #0056b3; text-decoration: underline; }
+
+.theme-light .about-page-content h1 {
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+.theme-light .about-page-content h2 { color: #007bff; }
+.theme-light .about-page-content p { color: #444; }
+
+.theme-light .search-section {
+  background-color: #e9ecef;
+}
+.theme-light .search-input {
+  border-color: #ced4da;
+}
+.theme-light .search-button {
+  background-color: #007bff;
+}
+
+.theme-light .app-footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+.theme-light .app-footer h4 { border-bottom-color: #007bff; }
+.theme-light .app-footer a { color: #adb5bd; }
+.theme-light .app-footer a:hover { color: #ffffff; }
+.theme-light .phone-link { color: #adb5bd; }
+.theme-light .phone-link:hover { color: #ffffff; }
+.theme-light .social-link { color: #adb5bd; }
+.theme-light .social-link:hover { color: #ffffff; }
+.theme-light .social-link.facebook { background-color: #1877f2; }
+
+.theme-light .social-button.google { background-color: #ffffff; border-color: #ddd; color: #333; }
+.theme-light .social-button.google:hover { background-color: #f8f9fa; border-color: #ccc; }
+.theme-light .social-button.facebook { background-color: #1877f2; color: white; border-color: #1877f2; }
+.theme-light .social-button.facebook:hover { background-color: #166fe5; border-color: #166fe5; }
+
+
+/* Theme Dark */
+.theme-dark {
+  background-color: #1a202c; /* Nền chính của trang tối */
+  color: #e2e8f0; /* Màu chữ chính sáng */
+}
+
+.theme-dark .app-header {
+  background-color: #2d3748; /* Nền header tối */
+  border-bottom: 1px solid #4a5568;
+}
+.theme-dark .app-header h1 { color: #63b3ed; } /* Màu xanh nhạt cho tiêu đề chính */
+.theme-dark .app-header span { color: #a0aec0; } /* Màu xám nhạt cho slogan */
+.theme-dark .main-nav a { color: #e2e8f0; } /* Màu link điều hướng sáng */
+.theme-dark .main-nav a:hover { color: #63b3ed; }
+.theme-dark .auth-section a, .theme-dark .user-icon-link { color: #63b3ed; }
+.theme-dark .theme-switcher { color: #63b3ed; }
+
+/* Áp dụng nền tối cho các khung card/section */
+.theme-dark .app-main {
+  background-color: #1a202c; /* Nền chính tối */
+}
+.theme-dark .article-list-section,
+.theme-dark .daily-news-section,
+.theme-dark .about-careplus,
+.theme-dark .about-page-content, /* Áp dụng cho toàn bộ card chứa nội dung */
+.theme-dark .search-section { /* Nền cho thanh tìm kiếm cũng nên tối */
+  background-color: #2d3748; /* Nền tối cho khung */
+  border-color: #4a5568; /* Màu viền tối */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Shadow tối hơn một chút */
+}
+
+.theme-dark .article-list-section h2,
+.theme-dark .daily-news-section h2,
+.theme-dark .about-careplus h2 {
+  color: #e2e8f0; /* Màu tiêu đề section sáng */
+  border-bottom-color: #63b3ed; /* Màu đường kẻ tiêu đề */
+}
+
+.theme-dark .article-preview h3 { color: #63b3ed; } /* Màu tiêu đề bài viết sáng */
+.theme-dark .article-meta { color: #a0aec0; } /* Màu meta sáng */
+.theme-dark .article-preview p { color: #e2e8f0; } /* Màu đoạn trích sáng */
+.theme-dark .read-more-link-about, .theme-dark .source-link { color: #63b3ed; }
+.theme-dark .read-more-link-about:hover, .theme-dark .source-link:hover { color: #90cdf4; text-decoration: underline; }
+
+.theme-dark .about-page-content h1 {
+  color: #63b3ed;
+  border-bottom-color: #63b3ed;
+}
+.theme-dark .about-page-content h2 { color: #63b3ed; }
+.theme-dark .about-page-content p { color: #e2e8f0; } /* Màu chữ chính sáng */
+
+.theme-dark .search-input {
+  border-color: #4a5568;
+  background-color: #2d3748; /* Nền input tối */
+  color: #e2e8f0; /* Màu chữ input sáng */
+}
+.theme-dark .search-button {
+  background-color: #63b3ed;
+}
+.theme-dark .search-button:hover {
+  background-color: #4c95e4;
+}
+
+.theme-dark .app-footer {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+.theme-dark .app-footer h4 { border-bottom-color: #63b3ed; }
+.theme-dark .app-footer a { color: #a0aec0; }
+.theme-dark .app-footer a:hover { color: #ffffff; }
+.theme-dark .phone-link { color: #a0aec0; }
+.theme-dark .phone-link:hover { color: #ffffff; }
+.theme-dark .social-link { color: #a0aec0; }
+.theme-dark .social-link:hover { color: #ffffff; }
+.theme-dark .social-link.facebook { background-color: #1877f2; }
+
+.theme-dark .social-button.google { background-color: #2d3748; border-color: #4a5568; color: #e2e8f0; }
+.theme-dark .social-button.google:hover { background-color: #3a4a5f; border-color: #5a6b7f; }
+.theme-dark .social-button.facebook { background-color: #1877f2; color: white; border-color: #1877f2; }
+.theme-dark .social-button.facebook:hover { background-color: #166fe5; border-color: #166fe5; }
+
+
+/* Theme Green */
+.theme-green {
+  background-color: #e0f2e9;
+  color: #2f855a; /* Màu chữ xanh */
+}
+
+.theme-green .app-header {
+  background-color: #c6f6d5;
+  border-bottom: 1px solid #9ae6b4;
+}
+.theme-green .app-header h1 { color: #38a169; } /* Màu xanh đậm */
+.theme-green .app-header span { color: #6b7a70; } /* Màu xám xanh */
+.theme-green .main-nav a { color: #2f855a; } /* Màu các link điều hướng xanh */
+.theme-green .main-nav a:hover { color: #2f855a; }
+.theme-green .auth-section a, .theme-green .user-icon-link { color: #38a169; }
+.theme-green .theme-switcher { color: #38a169; }
+
+.theme-green .app-main {
+  background-color: #e0f2e9;
+}
+
+.theme-green .article-list-section h2,
+.theme-green .daily-news-section h2,
+.theme-green .about-careplus h2 {
+  color: #2f855a; /* Màu tiêu đề section xanh */
+  border-bottom-color: #38a169;
+}
+
+.theme-green .article-preview h3 { color: #2f855a; } /* Màu tiêu đề bài viết xanh */
+.theme-green .article-meta { color: #6b7a70; } /* Màu meta xanh */
+.theme-green .article-preview p { color: #2f855a; } /* Màu đoạn trích xanh */
+.theme-green .read-more-link-about, .theme-green .source-link { color: #38a169; }
+.theme-green .read-more-link-about:hover, .theme-green .source-link:hover { color: #2f855a; text-decoration: underline; }
+
+.theme-green .about-page-content h1 {
+  color: #38a169;
+  border-bottom-color: #38a169;
+}
+.theme-green .about-page-content h2 { color: #38a169; }
+.theme-green .about-page-content p { color: #2f855a; }
+
+.theme-green .search-section {
+  background-color: #c6f6d5;
+}
+.theme-green .search-input {
+  border-color: #9ae6b4;
+  background-color: #c6f6d5;
+  color: #2f855a;
+}
+.theme-green .search-button {
+  background-color: #38a169;
+}
+.theme-green .search-button:hover {
+  background-color: #2f855a;
+}
+
+.theme-green .app-footer {
+  background-color: #2f855a;
+  color: #e8f5e9;
+}
+.theme-green .app-footer h4 { border-bottom-color: #38a169; }
+.theme-green .app-footer a { color: #a0e0b8; }
+.theme-green .app-footer a:hover { color: #ffffff; }
+.theme-green .phone-link { color: #a0e0b8; }
+.theme-green .phone-link:hover { color: #ffffff; }
+.theme-green .social-link { color: #a0e0b8; }
+.theme-green .social-link:hover { color: #ffffff; }
+.theme-green .social-link.facebook { background-color: #1877f2; }
+
+.theme-green .social-button.google { background-color: #e0f2e9; border-color: #9ae6b4; color: #2f855a; }
+.theme-green .social-button.google:hover { background-color: #c6f6d5; border-color: #8fdbb1; }
+.theme-green .social-button.facebook { background-color: #1877f2; color: white; border-color: #1877f2; }
+.theme-green .social-button.facebook:hover { background-color: #166fe5; border-color: #166fe5; }

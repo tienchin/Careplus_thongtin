@@ -1,0 +1,131 @@
+
+.article-preview {
+  background-color: #ffffff; /* Mặc định light */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Thêm transition cho màu */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.article-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.article-preview-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.article-preview h3 {
+  margin-top: 0;
+  color: #0056b3; /* Màu xanh cho tiêu đề bài viết */
+  font-size: 20px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.article-meta {
+  font-size: 13px;
+  color: #6c757d; /* Màu xám cho meta */
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.article-preview p {
+  color: #444; /* Màu đen cho đoạn trích */
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-source {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.source-link {
+  color: #007bff; /* Màu xanh cho link nguồn */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.2s ease-in-out;
+}
+
+.source-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* --- Styles cho Theme Dark --- */
+.theme-dark .article-preview {
+  background-color: #2d3748; /* Nền tối cho card bài viết */
+  border-color: #4a5568; /* Viền tối */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.theme-dark .article-preview h3 {
+  color: #63b3ed; /* Màu xanh nhạt cho tiêu đề bài viết */
+}
+
+.theme-dark .article-meta {
+  color: #a0aec0; /* Màu meta sáng */
+  border-bottom-color: #4a5568; /* Viền dưới meta tối */
+}
+
+.theme-dark .article-preview p {
+  color: #e2e8f0; /* Màu đoạn trích sáng */
+}
+
+.theme-dark .source-link {
+  color: #63b3ed; /* Màu link nguồn sáng */
+}
+.theme-dark .source-link:hover {
+  color: #90cdf4;
+}
+
+/* --- Styles cho Theme Green --- */
+.theme-green .article-preview {
+  background-color: #e0f2e9; /* Nền xanh nhạt */
+  border-color: #9ae6b4;
+}
+
+.theme-green .article-preview h3 {
+  color: #2f855a; /* Màu xanh đậm cho tiêu đề */
+}
+
+.theme-green .article-meta {
+  color: #6b7a70; /* Màu meta xanh */
+  border-bottom-color: #9ae6b4; /* Viền dưới meta xanh */
+}
+
+.theme-green .article-preview p {
+  color: #2f855a; /* Màu đoạn trích xanh */
+}
+
+.theme-green .source-link {
+  color: #38a169; /* Màu link nguồn xanh */
+}
+.theme-green .source-link:hover {
+  color: #2f855a;
+  text-decoration: underline;
+}
