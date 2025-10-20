@@ -1,7 +1,8 @@
-
+// src/components/Footer.js
 import React from 'react';
 import './Footer.css';
-import { FaFacebook, FaPhone } from 'react-icons/fa'; 
+import { Link } from 'react-router-dom';
+import { FaFacebook, FaPhone } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -21,7 +22,7 @@ function Footer() {
           <h4>Theo dõi chúng tôi</h4>
           <a href="https://www.facebook.com/share/1A13zMipxm/" target="_blank" rel="noopener noreferrer" className="social-link facebook">
             <FaFacebook />
-          </a> 
+          </a>
         </div>
       </div>
       <div className="copyright">

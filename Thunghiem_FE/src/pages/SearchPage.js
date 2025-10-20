@@ -1,4 +1,4 @@
-
+// src/pages/SearchPage.js
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ArticleList from '../components/ArticleList';
@@ -9,24 +9,38 @@ function SearchPage({ allArticles }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const query = searchParams.get('query');
     setSearchTerm(query || '');
 
-    if (!query) {
-      setResults([]);
-      setLoading(false);
-      return;
-    }
+    const performSearch = async () => {
+      if (!query) {
+        setResults([]);
+        setLoading(false);
+        setError(null);
+        return;
+      }
 
-    const filteredArticles = allArticles.filter(article =>
-      article.title.toLowerCase().includes(query.toLowerCase()) ||
-      article.excerpt.toLowerCase().includes(query.toLowerCase())
-    );
-    setResults(filteredArticles);
-    setLoading(false);
+      if (!allArticles || allArticles.length === 0) {
+        setError("Không thể thực hiện tìm kiếm khi dữ liệu bài viết chưa được tải.");
+        setLoading(false);
+        return;
+      }
+
+      const filteredArticles = allArticles.filter(article =>
+        article.title.toLowerCase().includes(query.toLowerCase()) ||
+        article.excerpt.toLowerCase().includes(query.toLowerCase())
+      );
+      
+      setResults(filteredArticles);
+      setLoading(false);
+      setError(null);
+    };
+
+    performSearch();
 
   }, [location.search, allArticles]);
 
@@ -36,7 +50,7 @@ function SearchPage({ allArticles }) {
       {loading && <div className="loading-message-search">Đang tìm kiếm...</div>}
       {error && <div className="error-message-search">{error}</div>}
       {!loading && !error && results.length === 0 && (
-        <p className="no-results-message">Không tìm thấy kết quả nào.</p>
+        <p className="no-results-message">Kết quả tìm kiếm của bạn không thực thi.</p>
       )}
       {!loading && !error && results.length > 0 && (
         <ArticleList title="" articles={results} />
